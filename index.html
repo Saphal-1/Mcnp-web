@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Nepal | MCNP</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* Reset */
+* {margin:0;padding:0;box-sizing:border-box;}
+
+/* Body with Nepali vibe background */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1579920439113-499c0fc6a013?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Glassmorphism card */
+.card {
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Minecraft style logo */
+.logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5em;
+  color: #00ff00;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;}
+  50% {text-shadow: 0 0 15px #00ff00, 0 0 25px #00ff00;}
+  100% {text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;}
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Server info cards */
+.server {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px 0;
+  transition: background 0.3s ease;
+}
+
+.server:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Buttons */
+.lang-btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #ff4d4d, #ff944d);
+  color: #fff;
+  font-size: 0.9em;
+}
+
+.lang-btn:hover {
+  background: linear-gradient(45deg, #ff944d, #ff4d4d);
+}
+
+/* Copy IP Button */
+.copy-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #00ff00;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #00cc00;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="logo">⛏️ MCNP</div>
+  
+  <h1 id="title">Minecraft Nepal</h1>
+  <p id="desc">
+    Minecraft Nepal is a Nepali Minecraft community server where players can survive, build, and enjoy together.
+  </p>
+
+  <!-- Java Edition -->
+  <div class="server">
+    <h3>🖥 Java Edition</h3>
+    <p><b>IP:</b> play.mcnpnetwork.com</p>
+    <button class="copy-btn" onclick="copyText('play.mcnpnetwork.com')">Copy IP</button>
+  </div>
+
+  <!-- Bedrock Edition -->
+  <div class="server">
+    <h3>📱 Bedrock Edition</h3>
+    <p><b>IP:</b> bedrock.mcnpnetwork.com</p>
+    <p><b>Port:</b> 8077</p>
+    <button class="copy-btn" onclick="copyText('bedrock.mcnpnetwork.com:8077')">Copy IP & Port</button>
+  </div>
+
+  <!-- Language toggle -->
+  <button class="lang-btn" onclick="setLang('en')">English</button>
+  <button class="lang-btn" onclick="setLang('np')">नेपाली</button>
+</div>
+
+<script>
+function setLang(lang) {
+  if(lang==='np'){
+    document.getElementById("title").innerText="माइनक्राफ्ट नेपाल";
+    document.getElementById("desc").innerText="माइनक्राफ्ट नेपाल एक नेपाली माइनक्राफ्ट समुदाय हो जहाँ खेलाडीहरू सँगै खेल्न, निर्माण गर्न र रमाइलो गर्न सक्छन्।";
+  } else {
+    document.getElementById("title").innerText="Minecraft Nepal";
+    document.getElementById("desc").innerText="Minecraft Nepal is a Nepali Minecraft community server where players can survive, build, and enjoy together.";
+  }
+}
+
+// Copy to clipboard function
+function copyText(text){
+  navigator.clipboard.writeText(text).then(()=>{
+    alert('Copied: '+text);
+  });
+}
+</script>
+
+</body>
+</html>
