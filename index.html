@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b17">
+  <meta name="description" content="MCNP Staff Team Application">
+  <title>MCNP • Staff Application</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="hero">
+    <div class="hero-brand">
+      <div class="logo-shell">
+        <img src="logo.png" alt="MCNP Logo" class="server-logo">
+      </div>
+      <div>
+        <span class="eyebrow">MCNP NETWORK</span>
+        <h1>Staff Team <span>Application</span></h1>
+        <p class="hero-copy">
+          Join the team behind the community. Tell us about your experience, skills,
+          availability, and how you would contribute to MCNP.
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <div><span class="meta-dot"></span> Applications are reviewed manually</div>
+      <div>18 questions</div>
+      <div>Estimated time: 5–8 min</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="progress-panel">
+      <div class="progress-card">
+        <div class="progress-head">
+          <div>
+            <span class="eyebrow">APPLICATION PROGRESS</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <span id="progressLabel">Getting started</span>
+        </div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+      </div>
+
+      <nav class="steps" aria-label="Application sections">
+        <a href="#basic" class="step active"><span>01</span><div><b>Basic Information</b><small>About you</small></div></a>
+        <a href="#department" class="step"><span>02</span><div><b>Department</b><small>Your role</small></div></a>
+        <a href="#experience" class="step"><span>03</span><div><b>Experience & Skills</b><small>Your background</small></div></a>
+        <a href="#situational" class="step"><span>04</span><div><b>Situational</b><small>Your judgement</small></div></a>
+        <a href="#verification" class="step"><span>05</span><div><b>Age Verification</b><small>Optional document</small></div></a>
+        <a href="#final" class="step"><span>06</span><div><b>Final Questions</b><small>Almost done</small></div></a>
+      </nav>
+
+      <div class="privacy-note">
+        <div class="privacy-icon">✓</div>
+        <div>
+          <b>Privacy first</b>
+          <p>Only submit information you are comfortable sharing with MCNP management. Do not upload passwords or unrelated private documents.</p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="form-area">
+      <form id="appForm" enctype="multipart/form-data" novalidate>
+
+        <section class="card" id="basic">
+          <div class="section-heading">
+            <div class="section-number">01</div>
+            <div><span class="eyebrow">PROFILE</span><h2>Basic Information</h2><p>Start with the details we need to identify your application.</p></div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field"><span>Discord Username <i>*</i></span>
+              <input type="text" name="discordUsername" required maxlength="100" placeholder="e.g. username">
+            </label>
+            <label class="field"><span>Minecraft Username <i>*</i></span>
+              <input type="text" name="mcUsername" required maxlength="50" placeholder="Your in-game name">
+            </label>
+            <label class="field"><span>Email Address <i>*</i></span>
+              <input type="email" name="email" required maxlength="150" placeholder="name@example.com">
+            </label>
+            <label class="field"><span>Contact Number / WhatsApp <i>*</i></span>
+              <input type="tel" name="phone" required maxlength="40" placeholder="+977 98XXXXXXXX">
+            </label>
+            <label class="field"><span>Age <i>*</i></span>
+              <input type="number" name="age" required min="13" max="99" placeholder="Your age">
+            </label>
+            <label class="field"><span>How long have you been part of MCNP? <i>*</i></span>
+              <select name="duration" required>
+                <option value="" selected disabled>Select duration</option>
+                <option>Less than 1 month</option><option>1–3 months</option>
+                <option>3–6 months</option><option>6–12 months</option><option>1+ year</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="card" id="department">
+          <div class="section-heading">
+            <div class="section-number">02</div>
+            <div><span class="eyebrow">ROLE</span><h2>Department</h2><p>Select the areas where you would like to contribute.</p></div>
+          </div>
+
+          <fieldset class="choice-fieldset">
+            <legend>Which department are you applying for? <i>*</i></legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="checkbox" name="departments" value="Support Staff"><span><b>Support Staff</b><small>Player support & assistance</small></span></label>
+              <label class="choice"><input type="checkbox" name="departments" value="Event Staff"><span><b>Event Staff</b><small>Events & community activities</small></span></label>
+              <label class="choice"><input type="checkbox" name="departments" value="Marketing & Media Staff"><span><b>Marketing & Media</b><small>Content & promotion</small></span></label>
+            </div>
+          </fieldset>
+
+          <label class="field"><span>Why do you want to join this department? <i>*</i></span>
+            <textarea name="whyDepartment" required rows="5" maxlength="2500" placeholder="Explain your motivation and what you could contribute..."></textarea>
+          </label>
+        </section>
+
+        <section class="card" id="experience">
+          <div class="section-heading">
+            <div class="section-number">03</div>
+            <div><span class="eyebrow">BACKGROUND</span><h2>Experience & Skills</h2><p>Help us understand your previous experience and strengths.</p></div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field"><span>Previous staff experience? <i>*</i></span>
+              <select name="hasExperience" required><option value="" selected disabled>Select one</option><option>Yes</option><option>No</option></select>
+            </label>
+            <label class="field"><span>How active are you on Discord / MCNP? <i>*</i></span>
+              <select name="activity" required><option value="" selected disabled>Select activity</option><option>Very active</option><option>Active</option><option>Moderately active</option><option>Occasionally active</option></select>
+            </label>
+          </div>
+
+          <label class="field"><span>If yes, describe your previous experience</span>
+            <textarea name="experienceDetails" rows="4" maxlength="2500" placeholder="Server, role, responsibilities, approximate duration..."></textarea>
+          </label>
+          <label class="field"><span>What skills or qualities make you suitable for this position? <i>*</i></span>
+            <textarea name="skills" required rows="5" maxlength="2500" placeholder="Communication, moderation, leadership, event management, technical skills, etc."></textarea>
+          </label>
+        </section>
+
+        <section class="card" id="situational">
+          <div class="section-heading">
+            <div class="section-number">04</div>
+            <div><span class="eyebrow">JUDGEMENT</span><h2>Situational Questions</h2><p>Answer in your own words. We care about reasoning and communication.</p></div>
+          </div>
+
+          <label class="field"><span>13. A player breaks the rules but argues they did nothing wrong. How would you handle it? <i>*</i></span>
+            <textarea name="q11" required rows="5" maxlength="3000" placeholder="Describe your approach..."></textarea>
+          </label>
+          <label class="field"><span>14. Two players start arguing in chat. What would you do? <i>*</i></span>
+            <textarea name="q12" required rows="5" maxlength="3000" placeholder="Describe your approach..."></textarea>
+          </label>
+          <label class="field"><span>15. What would you do if another staff member made a mistake? <i>*</i></span>
+            <textarea name="q13" required rows="5" maxlength="3000" placeholder="Describe your approach..."></textarea>
+          </label>
+        </section>
+
+        <section class="card verification-card" id="verification">
+          <div class="section-heading">
+            <div class="section-number">05</div>
+            <div><span class="eyebrow">VERIFICATION</span><h2>Age Verification</h2><p>Provide your age and, if requested or appropriate, an optional document for verification.</p></div>
+          </div>
+
+          <div class="verification-alert">
+            <span class="alert-icon">i</span>
+            <div><b>Optional document upload</b><p>Do not upload passwords, bank details, or unrelated documents. If you upload an ID, only information necessary for age verification should be visible where possible.</p></div>
+          </div>
+
+          <div class="field-grid">
+            <label class="field"><span>Date of Birth <i>*</i></span>
+              <input type="date" name="dateOfBirth" id="dateOfBirth" required>
+            </label>
+            <label class="field"><span>Verification method <i>*</i></span>
+              <select name="verificationMethod" id="verificationMethod" required>
+                <option value="" selected disabled>Select method</option>
+                <option value="No document — age stated">No document — age stated</option>
+                <option value="Document uploaded">Document uploaded</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" id="verificationDocument" name="verificationDocument" accept="image/jpeg,image/png,image/webp,application/pdf">
+            <div class="upload-icon">↑</div>
+            <b>Drop verification document here</b>
+            <span>or tap to browse · JPG, PNG, WEBP or PDF · max 5 MB</span>
+            <strong id="fileName">No document selected</strong>
+          </div>
+          <p class="field-hint">The document is optional. For privacy, this build does not place the document itself inside the Discord webhook message.</p>
+        </section>
+
+        <section class="card" id="final">
+          <div class="section-heading">
+            <div class="section-number">06</div>
+            <div><span class="eyebrow">FINAL STEP</span><h2>Final Questions</h2><p>Finish your application with availability and your final statement.</p></div>
+          </div>
+
+          <label class="field"><span>How many hours can you dedicate per week?</span>
+            <select name="weeklyHours"><option>1–3 hours</option><option>3–7 hours</option><option>7–15 hours</option><option>15+ hours</option></select>
+          </label>
+          <label class="field"><span>Why should we select you? <i>*</i></span>
+            <textarea name="whySelect" required rows="5" maxlength="3000" placeholder="Tell the management team what you would bring to MCNP..."></textarea>
+          </label>
+          <label class="field"><span>Anything else you would like management to know?</span>
+            <textarea name="extraInfo" rows="4" maxlength="2500" placeholder="Optional"></textarea>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" name="truthful" required>
+            <span>I confirm that the information provided is truthful and understand that submitting an application does not guarantee selection. <i>*</i></span>
+          </label>
+
+          <div class="submit-area">
+            <div><span class="secure-dot"></span><b>Your application is transmitted securely to the application endpoint.</b><small>Never enter your password or Discord token.</small></div>
+            <button type="submit" id="submitBtn"><span>Submit Application</span><b>→</b></button>
+          </div>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
